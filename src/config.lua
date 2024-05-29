@@ -1,5 +1,5 @@
 return {
   version = 0;
   enabled = true;
-  message = 'Hello World!';
+  axeGracePeriod = 1.0;
 }

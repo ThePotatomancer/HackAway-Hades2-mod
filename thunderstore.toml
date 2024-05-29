@@ -3,19 +3,17 @@ schemaVersion = "0.0.1"
 
 
 [package]
-namespace = "AuthorName"
-name = "ModName"
-versionNumber = "0.0.0"
-description = "Allows to do some super duper thing."
-websiteUrl = "https://github.com/AuthorName/ModName"
+namespace = "ThePotatoes"
+name = "Hack_Away"
+versionNumber = "0.0.1"
+description = "Rehauls the axe weapon. Makes QOL changes to the axe block special"
+websiteUrl = "https://github.com/ThePotatomancer/HackAway-Hades2-mod"
 containsNsfwContent = false
 
 [package.dependencies]
 Hell2Modding-Hell2Modding = "1.0.28"
 SGG_Modding-ENVY = "1.0.1"
 SGG_Modding-Chalk = "2.0.2"
-SGG_Modding-ReLoad = "1.0.1"
-SGG_Modding-SJSON = "1.0.0"
 SGG_Modding-ModUtil = "3.1.0"
 
 
