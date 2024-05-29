@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "ThePotatoes"
 name = "Hack_Away"
-versionNumber = "0.0.1"
+versionNumber = "0.0.2"
 description = "Rehauls the axe weapon. Makes QOL changes to the axe block special"
 websiteUrl = "https://github.com/ThePotatomancer/HackAway-Hades2-mod"
 containsNsfwContent = false
@@ -16,6 +16,7 @@ SGG_Modding-ENVY = "1.0.1"
 SGG_Modding-Chalk = "2.0.2"
 SGG_Modding-ModUtil = "3.1.0"
 SGG_Modding-ReLoad = "1.0.1"
+SGG_Modding-SJSON = "1.0.0"
 
 
 [build]

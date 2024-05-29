@@ -32,6 +32,9 @@ chalk = mods["SGG_Modding-Chalk"]
 ---@module 'SGG_Modding-ReLoad'
 reload = mods['SGG_Modding-ReLoad']
 
+---@module 'SGG_Modding-SJSON'
+sjson = mods['SGG_Modding-SJSON']
+
 ---@module 'config'
 config = chalk.auto 'config.lua'
 -- ^ this updates our `.cfg` file in the config folder!
@@ -40,18 +43,34 @@ public.config = config -- so other mods can access our config
 local function on_ready()
 	-- what to do when we are ready, but not re-do on reload.
 	if config.enabled == false then return end
-
+	if config.grace_period_enabled == true then
 	local ShieldChargeStages = game.DeepCopyTable(game.WeaponData.WeaponAxeBlock2.ChargeWeaponStages)
 	local FirstStage = ShieldChargeStages[1]
 	FirstStage.ForceRelease = false
 	ShieldChargeStages[1] = FirstStage
 	ShieldChargeStages[2] = {
 		DeferSwap = FirstStage.DeferSwap,
-		Wait = config.axeGracePeriod,
+		Wait = config.axe_grace_period,
 		ForceRelease = true,
 	}
 	game.WeaponData.WeaponAxeBlock2.ChargeWeaponStages = game.DeepCopyTable(
 		ShieldChargeStages)
+	end
+	if config.always_mouse_aim_special == true then
+		local weaponsPath = sjson.get_game_data_path() .. config.player_weapons_subpath;
+		sjson.hook(weaponsPath, function(data)
+			local weaponsData = data.Weapons
+			for key, weaponData in pairs(weaponsData) do
+				if weaponData.Name == config.special_axe_attack_name then
+					weaponData.UseTargetAngle = true
+					weaponData.SetCompleteAngleOnCharge = true
+					weaponData.CanUseKeyboardAim = true
+					break
+				end
+			end
+			return data
+		end)
+	end
 end
 
 local function on_reload()
