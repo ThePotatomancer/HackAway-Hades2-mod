@@ -29,6 +29,9 @@ modutil = mods['SGG_Modding-ModUtil']
 ---@module 'SGG_Modding-Chalk'
 chalk = mods["SGG_Modding-Chalk"]
 
+---@module 'SGG_Modding-ReLoad'
+reload = mods['SGG_Modding-ReLoad']
+
 ---@module 'config'
 config = chalk.auto 'config.lua'
 -- ^ this updates our `.cfg` file in the config folder!
@@ -55,6 +58,9 @@ local function on_reload()
 	-- what to do when we are ready, but also again on every reload.
 	-- only do things that are safe to run over and over.
 end
+
+-- this allows us to limit certain functions to not be reloaded.
+local loader = reload.auto_single()
 
 -- this runs only when modutil and the game's lua is ready
 modutil.on_ready_final(function()
