@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] - 2024-05-29
+
 ## [0.0.2] - 2024-05-29
 
 ## [0.0.2]
@@ -22,5 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First version of the mod!
 - A grace period of the axe block
 
-[unreleased]: https://github.com/ThePotatomancer/HackAway-Hades2-mod/compare/0.0.2...HEAD
+[unreleased]: https://github.com/ThePotatomancer/HackAway-Hades2-mod/compare/0.0.3...HEAD
+[0.0.3]: https://github.com/ThePotatomancer/HackAway-Hades2-mod/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/ThePotatomancer/HackAway-Hades2-mod/compare/edf2905e925dcb1b76fd4c6b9cf8e466a0313b24...0.0.2
